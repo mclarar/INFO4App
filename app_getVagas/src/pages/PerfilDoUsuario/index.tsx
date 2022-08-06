@@ -50,7 +50,7 @@ const PerfilDoUsuario = ({ navigation }) => {
                   margin: 5,
                   marginBottom: 10,
                 }}
-                onPress={() => console.log('aEditar perfil pressionado')}
+                onPress={() => console.log('Editar perfil pressionado')}
               />
 
               <Button
@@ -71,7 +71,6 @@ const PerfilDoUsuario = ({ navigation }) => {
                     email: '',
                     token: '',
                   });
-                  console.log(usuario);
                   navigation.navigate('LoginScreen');
                 }}
               />

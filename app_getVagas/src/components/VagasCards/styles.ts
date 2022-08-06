@@ -12,21 +12,23 @@ export const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-evenly',
     width: 332,
-    height: 155,
+    height: 170,
     backgroundColor: 'white',
-    padding: 15,
+    padding: 10,
     marginVertical: 5,
     flexDirection: 'column',
     elevation: 20,
     shadowColor: '#000',
     shadowOpacity: 1.0,
-    marginLeft: 25
+    marginLeft: 18
   },
 
   text: {
     textAlign: 'left',
     color: '#000',
     fontSize: 19,
+    padding: 8
+
   },
 
   textButton: {

@@ -41,6 +41,7 @@ function VagasCard(vaga: any) {
             backgroundColor: '#ffb568',
             borderRadius: 18,
             margin: 5,
+            padding: 5
           }}
           onPress={() => console.log('tenho interesse pressionado')}
         />

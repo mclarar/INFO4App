@@ -3,7 +3,7 @@ import AxiosInstance from '../api/AxiosInstance';
 import jwt_decode from 'jwt-decode';
 
 const LoginService = async (email: string, senha: string) => {
-  console.log(`Email: ${email} - Senha: ${senha}`);
+
   var tokenDecodificado: any = null;
   try {
     const resposta = await AxiosInstance.post('autenticacao', {
@@ -12,7 +12,6 @@ const LoginService = async (email: string, senha: string) => {
     });
 
     if (resposta.status === 200) {
-      console.log('Resposta do LogService' + JSON.stringify(resposta.data));
       tokenDecodificado = jwt_decode(resposta.data.token);
       tokenDecodificado['token'] = resposta.data.token;
       return tokenDecodificado;
@@ -20,8 +19,7 @@ const LoginService = async (email: string, senha: string) => {
       return false;
     }
   } catch (error) {
-    console.log('Erro ao realizar login' + JSON.stringify(error));
     return false;
   }
 };
-export {LoginService};
+export { LoginService };
