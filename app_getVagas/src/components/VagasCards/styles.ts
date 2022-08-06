@@ -21,22 +21,16 @@ export const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 1.0,
     marginLeft: 25
-
   },
-
 
   text: {
     textAlign: 'left',
     color: '#000',
     fontSize: 19,
-
-
-
   },
 
   textButton: {
     color: '#000',
     fontWeight: 'bold'
-
   },
 });

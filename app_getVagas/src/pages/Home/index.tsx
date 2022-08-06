@@ -1,26 +1,17 @@
 import React, { useEffect, useState, useContext } from 'react';
 import {
   ScrollView,
-  StyleSheet,
   View,
-  TouchableOpacity,
-  ImageBackground,
-  TouchableHighlight,
-  BackHandler,
   FlatList,
-  Image,
-  ActivityIndicator
+
 } from 'react-native';
 
-import { Rating, AirbnbRating } from 'react-native-ratings';
-import { Text, Card, Input, Icon } from 'react-native-elements';
+import { Text, Input, Icon } from 'react-native-elements';
 import AxiosInstance from '../../api/AxiosInstance';
 import { AutenticacaoContext } from '../../context/AutenticacaoContext';
-
 import { LoadingContext } from '../../context/LoadingContext';
 import VagasCard from '../../components/VagasCards/VagasCards'
 import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
-
 import { styles } from './style';
 
 
@@ -35,7 +26,6 @@ const Home = ({ route, navigation }) => {
 
 
   useEffect(() => {
-
     getVagas();
   }, [])
 
@@ -56,7 +46,7 @@ const Home = ({ route, navigation }) => {
 
     )
       .then(result => {
-        console.log('Dados dos produtos' + JSON.stringify(result.data));
+
         setVaga(result.data);
         setLoading(false);
       })
@@ -79,13 +69,8 @@ const Home = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-
-
       <LoadingComponent />
-      <View style={styles.containerLogo}>
-        {/* <Image style={styles.logo} source={require('../../assets/logohome.png')} /> */}
-        {/* <Text style={styles.tituloText}>Home</Text> */}
-      </View>
+
       <ScrollView style={styles.containerItems}>
         <View>
           <Input
@@ -106,15 +91,7 @@ const Home = ({ route, navigation }) => {
             }
           />
         </View>
-        <ScrollView style={styles.bottomCardScrollView}>
-          {/* <TouchableOpacity>
-            <Card containerStyle={styles.BottomCardStyle}>
-              <Card.Image
-                source={require('../../assets/banner-frete.png')} />
 
-            </Card>
-          </TouchableOpacity> */}
-        </ScrollView>
         <Text style={styles.colorText}>{'Encontre sua vaga!'}</Text>
         <FlatList
           data={vaga}
@@ -129,7 +106,6 @@ const Home = ({ route, navigation }) => {
             />}
         />
       </ScrollView>
-
     </View>
   );
 };

@@ -1,20 +1,15 @@
 import React, { useState, useContext } from 'react';
 import {
   Alert,
-  StyleSheet,
   View,
   ActivityIndicator,
-  ImageBackground,
-  Image,
+  ImageBackground
+
 } from 'react-native';
 import { Input, Text, Button, Icon } from 'react-native-elements';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { color } from 'react-native-reanimated';
 import { AutenticacaoContext } from '../../context/AutenticacaoContext';
 import { LoadingContext } from '../../context/LoadingContext';
 import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
-import Cadastro from '../Cadastro';
-import storewars from '../../assets/storewars.png';
 import { styles } from './style'
 
 const Login = ({ navigation }) => {
@@ -37,7 +32,7 @@ const Login = ({ navigation }) => {
       ]);
       setLoading(false);
     } else {
-      // setLoading(false);
+
       navigation.navigate('HomeScreen');
     }
   };
@@ -53,10 +48,15 @@ const Login = ({ navigation }) => {
           uri: 'https://i.pinimg.com/564x/b2/30/d1/b230d19d4d73f6c68cc728f132ed5ebe.jpg',
         }}
         resizeMode="cover"
-        style={styles.imageBack}>
+        style={styles.imageBackground}>
         <View style={styles.container_itens}>
-          <Text style={styles.texto_entrada}>{'Bem-vindo!'}</Text>
-          <Text style={styles.texto_entrada_menor}>{'Faça o login para continuar'}</Text>
+          <Text style={styles.texto_entrada}>
+            {'Bem-vindo!'}
+          </Text>
+          <Text style={styles.texto_entrada_menor}>
+            {'Faça o login para continuar'}
+          </Text>
+
           <Input
             inputStyle={styles.input}
             placeholder='E-mail'

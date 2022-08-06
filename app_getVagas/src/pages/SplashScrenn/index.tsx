@@ -1,9 +1,9 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import Lottie from 'lottie-react-native';
-import splash from '../../assets/splash.gif';
 import { useNavigation } from '@react-navigation/native';
-import Login from '../Login';
+import { styles } from './style'
+
 
 const Splash = () => {
   const navigation = useNavigation();
@@ -19,14 +19,5 @@ const Splash = () => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: '#e6f2f3'
 
-  },
-});
 export default Splash;

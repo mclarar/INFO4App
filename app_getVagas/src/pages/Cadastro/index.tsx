@@ -1,25 +1,18 @@
-import { useNavigation } from '@react-navigation/native';
 import React, { useContext, useState } from 'react';
 import {
-  StyleSheet,
   View,
-  ImageBackground,
-  TextInput,
   ScrollView,
-  Alert,
-  TouchableOpacity,
-  Image,
+  Alert
 } from 'react-native';
-import { Input, Text, Button, Icon } from 'react-native-elements';
+import {
+  Input,
+  Text,
+  Button,
+} from 'react-native-elements';
 import { styles } from './style';
 import AxiosInstance from '../../api/AxiosInstance';
 import { AutenticacaoContext } from '../../context/AutenticacaoContext';
-import {
-  CameraOptions,
-  ImageLibraryOptions,
-  launchCamera,
-  launchImageLibrary,
-} from 'react-native-image-picker';
+
 
 
 const Cadastro = () => {
@@ -30,7 +23,6 @@ const Cadastro = () => {
   const [salario, setSalario] = useState('');
   const [horaTrabalho, setHoraTrabalho] = useState('');
 
-  const navigation = useNavigation();
 
   const postVaga = () => {
     const vaga = {
@@ -41,7 +33,7 @@ const Cadastro = () => {
       horaTrabalho: horaTrabalho,
 
     };
-    // console.log("entrou no post Vaga");
+
 
     AxiosInstance
       .post(
@@ -57,12 +49,10 @@ const Cadastro = () => {
 
       )
       .then((response) => {
-        console.log(response.data);
         Alert.alert("Vaga cadastrada com sucesso!")
 
       })
       .catch((error) => {
-        console.log(error);
         Alert.alert("Erro! verifique as informações de cadastro.")
 
       });
@@ -74,9 +64,11 @@ const Cadastro = () => {
     <View style={styles.container}>
 
       <ScrollView style={styles.containerScroll}>
-        <Text style={styles.texto_entrada}>{'Divulgue sua oportunidade!'}</Text>
-        <View style={styles.containerItems}>
+        <Text style={styles.texto_entrada}>
+          {'Divulgue sua oportunidade!'}
+        </Text>
 
+        <View style={styles.containerItems}>
           <Input
             placeholder="Empresa"
             onChangeText={setEmpresa}
@@ -126,11 +118,8 @@ const Cadastro = () => {
             }}
             onPress={() => postVaga()}
           />
-
-
         </View>
       </ScrollView>
-
     </View>
   );
 };

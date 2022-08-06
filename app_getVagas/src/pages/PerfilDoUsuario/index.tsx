@@ -1,15 +1,11 @@
 import React, { useContext, useState } from 'react';
 import {
-  Alert,
-  StyleSheet,
   View,
-  ActivityIndicator,
   ImageBackground,
   Image,
 } from 'react-native';
-import { Input, Text, Button, Icon } from 'react-native-elements';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import { color } from 'react-native-reanimated';
+import { Text, Button } from 'react-native-elements';
+import { ScrollView } from 'react-native-gesture-handler';
 import { AutenticacaoContext } from '../../context/AutenticacaoContext';
 import { styles } from './style';
 

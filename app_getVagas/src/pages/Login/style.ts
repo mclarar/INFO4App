@@ -4,7 +4,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#e6f2f3',
-
     alignItems: 'stretch',
     justifyContent: 'center'
 
@@ -16,6 +15,7 @@ export const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center'
   },
+
   texto_entrada: {
     fontWeight: 'bold',
     fontSize: 30,
@@ -32,26 +32,25 @@ export const styles = StyleSheet.create({
     color: '#3a97a3',
     textAlign: 'center'
   },
-  input: {
-    color: "#000",
 
+  input: {
+    color: "#000"
   },
 
   title_Button: {
     fontSize: 25,
-
   },
 
   buttonStyle: {
-
     marginTop: 8,
   },
-  imageBack: {
+
+  imageBackground: {
     flex: 1,
     justifyContent: 'center',
     padding: 0,
     margin: 0
-  },
+  }
 
 
 

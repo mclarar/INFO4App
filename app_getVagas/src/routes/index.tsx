@@ -1,27 +1,17 @@
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { StatusBar, SafeAreaView } from 'react-native';
-import React, { useContext } from 'react';
+import { StatusBar } from 'react-native';
+import { Icon } from 'react-native-elements';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
-
-
-import { Icon, Badge, withBadge } from 'react-native-elements';
-
-
 import Cadastro from '../pages/Cadastro';
-
 import PerfilDoUsuario from '../pages/PerfilDoUsuario';
-
-
 import Splash from '../pages/SplashScrenn';
 
 const TabNavigation = createBottomTabNavigator();
 const BottomTabNavigator = () => {
-
-
 
   return (
     <TabNavigation.Navigator
@@ -80,15 +70,21 @@ const Routes = () => {
     <NavigationContainer>
       <StatusBar barStyle={'light-content'} hidden={true} animated={true} />
       <StackNavigation.Navigator screenOptions={{ headerShown: false }}>
-        <StackNavigation.Screen name="SplashScreen" component={Splash} />
-        <StackNavigation.Screen name="LoginScreen" component={Login} />
+        <StackNavigation.Screen
+          name="SplashScreen"
+          component={Splash}
+        />
+        <StackNavigation.Screen
+          name="LoginScreen"
+          component={Login} />
         <StackNavigation.Screen
           name="HomeScreen"
           component={BottomTabNavigator}
         />
-
-
-        <StackNavigation.Screen name="CadastroScreen" component={Cadastro} />
+        <StackNavigation.Screen
+          name="CadastroScreen"
+          component={Cadastro}
+        />
       </StackNavigation.Navigator>
     </NavigationContainer>
   );

@@ -23,7 +23,6 @@ export const styles = StyleSheet.create({
   },
   colorText: {
     color: '#000',
-
     textAlign: 'center',
     fontSize: 20,
   },

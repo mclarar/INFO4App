@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { Text } from 'react-native-elements';
 import Lottie from 'lottie-react-native';
 import { styles } from './style';
@@ -23,7 +23,6 @@ function LoadingComponent() {
                 style={styles.Gif}
               />
             </View>
-
           </View>
         </View>
       </View>
